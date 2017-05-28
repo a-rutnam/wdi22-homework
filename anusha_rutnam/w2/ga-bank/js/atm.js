@@ -1,81 +1,117 @@
-var $balances = $('.balance');
+$(document).ready(function () {
+  console.log( "The page is ready" );
 
+// $('#savingsBalance').text(new amount here)
 
-$balances.each(function () {
-    var test = (this.id);
-    console.log(
-      parseFloat($('#'+test).text().split("$")[1])
-
-    );//log
-}
-);
+var $currentBalance = parseFloat($('#savingsBalance').text().split("$")[1])
 
 
 
-
-var $chequeBalance =   parseFloat($('#chequeBalance').text().split("$")[1])
-var $savingsBalance =  parseFloat($('#savingsBalance').text().split("$")[1])
-var $chequeAdjust = parseFloat($('#chequeAmount').val())
-var $savingsAdjust = parseFloat($('#chequeAmount').val())
-var $allALinks = $('ul a');
-
-$allALinks.each(function() {
-
-  var url = $('.balance').attr('href');
-  console.log(this);
-  console.log('original url', url);
+// ***
 
 
-  $paragraphs.each(function () {
-    var $this = $( this );
-    $this.html( $this.html() + " wowee!!!" );
+  $( "#savingsDeposit" ).click(function() {
+      $currentBalance;
+  var $savingsAdjust = parseFloat($('#savingsAmount').val())
+
+  $currentBalance = ($currentBalance+$savingsAdjust)
+  // savingsDepositsArray.push($savingsAdjust)
+  alert($currentBalance);
+  $('#savingsBalance').text("$"+$currentBalance)
   });
+// ***
 
-//don't let '$' be part of input, numbers and decimal points only, add alert later for bad characters
-// var $chequeChange = parseFloat($('#chequeAmount').val().split("$")[1])
-
-
-//if the cheque deposit button is clicked
-$( "#chequeDeposit" ).click(function() {
-  $chequeBalance = $chequeBalance + $chequeAdjust
-  // console.log('bla');
-  //when this button is clicked take the .text of the input and add it to the $cheque balance. dry is probably not doing this separately for both savings and cheque. action should probs not be a dom thing?
-});
+// $(savingsBalance).html("Hello World");
 
 
 
 
-
-var balanceIdArray = [];
-
-$('.balance').each(function () {
-    var test = (this.id);
-    console.log(
-      parseFloat($('#'+test).text().split("$")[1])
-
-    );//log
-}
-);
-
-//works:
-var idArray = [];
-$('.red').each(function () {
-    idArray.push(this.id);
-});
-
-//this get the number
-parseFloat ($('#___Balance.balance').text().split("$")[1])
-
-
-$paragraphs.each(function () {
-  var $this = $( this );
-  $this.html( $this.html() + " wowee!!!" );
-});
+//if the cheque deposit button is clicked, push $savingsAdjust to savingsDeposits array
+// var $newBalance = function (){
+//   $( "#savingsDeposit" ).click(function() {
+//   $savingsBalance = $savingsBalance+$savingsAdjust
+//   }
+// });
 
 
 
 
-// * Add functionality so that a user can deposit money into one of the bank accounts.
+
+//
+//
+// $( "#savingsDeposit" ).click(function() {
+//   var $savingsAdjust = parseFloat($('#savingsAmount').val())
+//   $savingsBalance = $savingsBalance+$savingsAdjust
+//   // savingsDepositsArray.push($savingsAdjust)
+// });
+//
+//
+// var savingsWithdrawalsArray = []
+//
+// $( "#savingsWithdraw" ).click(function() {
+//   var $savingsAdjust = parseFloat($('#savingsAmount').val())
+//   savingsWithdrawalsArray.push($savingsAdjust)
+// });
+//
+//
+//
+//
+//
+//
+// // var $chequeBalance =   parseFloat($('#chequeBalance').text().split("$")[1])
+// // var $savingsBalance =  parseFloat($('#savingsBalance').text().split("$")[1])
+// //total of saving deposits array
+//
+//
+// var $savingsAdjust = function () {
+//   $savingsAdjust parseFloat($('#savingsAmount').val())
+//
+// }
+//
+//
+//
+//
+//
+// var $chequeAdjust = parseFloat($('#chequeAmount').val())
+//
+//
+//
+//
+// //don't let '$' be part of input, numbers and decimal points only, add alert later for bad characters
+//
+//
+//
+//
+//
+//
+//
+//
+// //works:
+// var idArray = [];
+// $('.red').each(function () {
+//     idArray.push(this.id);
+// });
+//
+//
+//
+// $paragraphs.each(function () {
+//   var $this = $( this );
+//   $this.html( $this.html() + " wowee!!!" );
+// });
+
+
+
+//work out dry later:
+// var $balances = $('.balance');
+
+// $balances.each(function () {
+//     var test = (this.id);
+//     console.log(
+//       parseFloat($('#'+test).text().split("$")[1])
+//
+//     );//log
+// }
+// );
 
 //
 //
@@ -122,3 +158,6 @@ $paragraphs.each(function () {
 //
 // [12:42]
 // _a very similar process could be applied to Project 0_
+
+
+});
