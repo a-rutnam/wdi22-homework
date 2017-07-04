@@ -1,0 +1,12 @@
+#words{
+  display:none;
+}
+
+.word{
+  font: 60pt;
+  color: white;
+  position: absolute;
+  display: none;
+
+
+}

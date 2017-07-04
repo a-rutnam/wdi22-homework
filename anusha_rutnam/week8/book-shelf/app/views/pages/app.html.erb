@@ -1,0 +1,30 @@
+<div id="app"></div>
+
+<script type="html/template" id="AppViewTemplate">
+<div id="appView">
+  <h1>The Book repo</h1>
+  <nav>
+    <a href="#">All Books</a>
+    <a href="#">A Book</a>
+  </nav>
+  <hr>
+  <ul id="books"></ul>
+</div>
+</script>
+
+
+<script type="html/template" id="BookViewTemplate">
+  <div id="bookView">
+    <h2>
+      {{title}}
+    </h2>
+    <h3>
+      By: {{author}}
+    </h3>
+    <p>
+      {{plot}}
+    </p>
+  </div>
+
+
+</script>

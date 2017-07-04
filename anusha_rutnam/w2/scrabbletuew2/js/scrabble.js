@@ -44,36 +44,37 @@
 
 //solution
 var scrabble = {
-  // letterScores:{
-  //   1: "AEIOULNRST".split(''),
-  //   2: ["D","G"],
-  //   3: "BCMP".split(''),
-  //   4: "FHVWY".split(''),
-  //   5: ["K"],
-  //   8: ["J,X"],
-  //   10:["Q","Z"]
-  // }
-  //
-  // score: function (word) {
-  // // can't control what people are going to parse into this function (in terms of case)
-  // word = word.todoupperCase();
-  // //initial value for the total score of the word
-  // var sum = 0;
-  // //itterate over the word that is input and then look at each character
-  //   for (var i = 0; i < word.length; i++) {
-  //   var letter = word[i];
-  //   //use of this below, figure out
-  //     for(var key in this.letterScores){
-  //     //includes gives back boolean
-  //       if (this.letterScores[key].includes(letter)){
-  //         sum += parseInt(key);
-  //         console.log(letter +" gets a "+ key);
-  //
-  //       }//if
-  //     }//for...in
-  //   }//word letter
-  //   return sum;
-  // },//end score
+  letterScores:{
+    1: "AEIOULNRST".split(''),
+    2: ["D","G"],
+    3: "BCMP".split(''),
+    4: "FHVWY".split(''),
+    5: ["K"],
+    8: ["J,X"],
+    10:["Q","Z"]
+  }
+
+//what is this score thing again
+  score: function (word) {
+  // can't control what people are going to parse into this function (in terms of case)
+  word = word.todoupperCase();
+  //initial value for the total score of the word
+  var sum = 0;
+  //itterate over the word that is input and then look at each character
+    for (var i = 0; i < word.length; i++) {
+    var letter = word[i];
+    //use of this below, figure out
+      for(var key in this.letterScores){
+      //includes gives back boolean
+        if (this.letterScores[key].includes(letter)){
+          sum += parseInt(key);
+          console.log(letter +" gets a "+ key);
+
+        }//if
+      }//for...in
+    }//word letter
+    return sum;
+  },//end score
   //better solution. diff data structure try i.e. what i tried first:
   letterScoresAlternative: {
 "A":1,

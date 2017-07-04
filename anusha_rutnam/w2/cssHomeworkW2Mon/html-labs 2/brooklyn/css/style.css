@@ -47,14 +47,19 @@ p.copyright {
 }
 
 
+
   a:hover{
 color: #20222a;
 }
 IMG.logo {
-  display: block;
-  margin-left: 100px;
+position: absolute;
+    display: inline-block;
+
   margin-right: auto;
-  padding: 10px
+  padding-left: 60px;
+/*how do i make it align left to the img.displayed left*/
+  }
+
 
 }
 

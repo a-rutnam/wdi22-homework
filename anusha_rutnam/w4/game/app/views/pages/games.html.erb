@@ -1,0 +1,41 @@
+<p>The Magic 8 Balls Deep Fortune Teller</p>
+
+<img src="http://static-media.fxx.com/img/FX_Networks_-_FXX/361/387/Simpsons_06_17_P1.jpg" alt="">
+
+
+
+<form method='get' action="/magic">
+  <input type="text" name="question" placeholder="Enter your question for the Magic 8 Ball">
+  <button>Submit!</button>
+</form>
+
+
+<hr>
+
+
+<p>Correctly guess the secret number between 1 and 10 below.</p>
+
+
+<form method='get' action="/secret_number">
+  <input type="text" name="guess" placeholder="guess a number">
+  <button>Submit!</button>
+</form>
+
+
+<hr>
+<!--following doens't work. Jules used get rather than post  -->
+<form method="post" action="/rps/:throw" >
+  <input type="text" name="throw" placeholder="Rock, Paper or Scissors">
+  <button>Submit!</button>
+</form>
+
+
+
+<!--
+__Rock Paper Scissors__
+
+* Create a route that goes from ```/games/rock_paper_scissors/:throw``` to ```rps#play```
+* Use params[:throw] as a user's choice
+* Compare the 2! If  users throw matches the apps throw, the user wins.
+* i.e. If a user throws rock ```http://localhost:3000/games/rock_paper_scissors/rock``` and the server picks rock player wins! (Yes,  I know that is not how RPS works)
+Bonus: Set the win or lose condition based on the real rules of [Rock Paper Scissors](http://en.wikipedia.org/wiki/Rock-paper-scissors). -->
