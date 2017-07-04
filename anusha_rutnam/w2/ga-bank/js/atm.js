@@ -1,6 +1,7 @@
 $(document).ready(function () {
   console.log( "The page is ready" );
 
+<<<<<<< HEAD
 
 //rather than the following two, i'd rather have a non dom var that starts at zero and then takes the sum of the adjust arrays - is that  a better idea?
 var $currentSavingsBalance = parseFloat($('#savingsBalance').text().split("$")[1])
@@ -88,6 +89,122 @@ var chequeAdjustArray = [0];
 
 
 //
+=======
+// $('#savingsBalance').text(new amount here)
+
+var $currentBalance = parseFloat($('#savingsBalance').text().split("$")[1])
+
+
+
+// ***
+
+
+  $( "#savingsDeposit" ).click(function() {
+      $currentBalance;
+  var $savingsAdjust = parseFloat($('#savingsAmount').val())
+
+  $currentBalance = ($currentBalance+$savingsAdjust)
+  // savingsDepositsArray.push($savingsAdjust)
+  alert($currentBalance);
+  $('#savingsBalance').text("$"+$currentBalance)
+  });
+// ***
+
+// $(savingsBalance).html("Hello World");
+
+
+
+
+//if the cheque deposit button is clicked, push $savingsAdjust to savingsDeposits array
+// var $newBalance = function (){
+//   $( "#savingsDeposit" ).click(function() {
+//   $savingsBalance = $savingsBalance+$savingsAdjust
+//   }
+// });
+
+
+
+
+
+//
+//
+// $( "#savingsDeposit" ).click(function() {
+//   var $savingsAdjust = parseFloat($('#savingsAmount').val())
+//   $savingsBalance = $savingsBalance+$savingsAdjust
+//   // savingsDepositsArray.push($savingsAdjust)
+// });
+//
+//
+// var savingsWithdrawalsArray = []
+//
+// $( "#savingsWithdraw" ).click(function() {
+//   var $savingsAdjust = parseFloat($('#savingsAmount').val())
+//   savingsWithdrawalsArray.push($savingsAdjust)
+// });
+//
+//
+//
+//
+//
+//
+// // var $chequeBalance =   parseFloat($('#chequeBalance').text().split("$")[1])
+// // var $savingsBalance =  parseFloat($('#savingsBalance').text().split("$")[1])
+// //total of saving deposits array
+//
+//
+// var $savingsAdjust = function () {
+//   $savingsAdjust parseFloat($('#savingsAmount').val())
+//
+// }
+//
+//
+//
+//
+//
+// var $chequeAdjust = parseFloat($('#chequeAmount').val())
+//
+//
+//
+//
+// //don't let '$' be part of input, numbers and decimal points only, add alert later for bad characters
+//
+//
+//
+//
+//
+//
+//
+//
+// //works:
+// var idArray = [];
+// $('.red').each(function () {
+//     idArray.push(this.id);
+// });
+//
+//
+//
+// $paragraphs.each(function () {
+//   var $this = $( this );
+//   $this.html( $this.html() + " wowee!!!" );
+// });
+
+
+
+//work out dry later:
+// var $balances = $('.balance');
+
+// $balances.each(function () {
+//     var test = (this.id);
+//     console.log(
+//       parseFloat($('#'+test).text().split("$")[1])
+//
+//     );//log
+// }
+// );
+
+//
+//
+>>>>>>> 45430198f9e0cfb9e80e4e0e04160f27c0dcb5e2
 // #Title: ATM App
 //
 // ###Type:
